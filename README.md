@@ -2,6 +2,9 @@
 
 Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decision Tree**) untuk mengklasifikasikan artikel berita ke dalam kategori tertentu secara otomatis. Proyek ini dikembangkan sebagai bagian dari tugas kelompok untuk mata kuliah Pengantar Pemrosesan Data dan Multimedia.
 
+### 🔗 Live Demo
+Aplikasi ini dapat diakses secara langsung melalui: [**klasifikasi-berita-dt.streamlit.app**](https://klasifikasi-berita-dt.streamlit.app/)
+
 ## 🚀 Fitur Utama
 
 - **Input Berita Tunggal**: Masukkan judul dan deskripsi berita secara manual untuk mendapatkan prediksi kategori instan.
@@ -41,8 +44,8 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di lingkungan lo
 
 ### 1. Clone Repositori
 ```bash
-git clone https://github.com/username/repository-name.git
-cd repository-name
+git clone https://github.com/oka123/Klasifikasi-Berita---Decision-Tree.git
+cd Klasifikasi-Berita---Decision-Tree
 ```
 
 ### 2. Buat Virtual Environment (Opsional tapi Disarankan)
