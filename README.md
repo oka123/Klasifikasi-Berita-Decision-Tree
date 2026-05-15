@@ -2,8 +2,10 @@
 
 Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decision Tree**) untuk mengklasifikasikan artikel berita ke dalam kategori tertentu secara otomatis. Proyek ini dikembangkan sebagai bagian dari tugas kelompok untuk mata kuliah Pengantar Pemrosesan Data dan Multimedia.
 
-### 🔗 Live Demo
-Aplikasi ini dapat diakses secara langsung melalui: [**klasifikasi-berita-dt.streamlit.app**](https://klasifikasi-berita-dt.streamlit.app/)
+### 🔗 Link Terkait
+
+- **Live Demo**: [klasifikasi-berita-dt.streamlit.app](https://klasifikasi-berita-dt.streamlit.app/)
+- **Kaggle Notebook**: [Notebook](https://www.kaggle.com/code/iputugedeokaadyuta/tugas-ppdm-diy)
 
 ## 🚀 Fitur Utama
 
@@ -11,7 +13,7 @@ Aplikasi ini dapat diakses secara langsung melalui: [**klasifikasi-berita-dt.str
 - **Unggah Batch (CSV/Excel)**: Unggah file dataset berita dalam format CSV atau Excel untuk diproses secara massal.
 - **Visualisasi Hasil**: Menampilkan pratinjau data asli dan hasil prediksi dalam tabel yang interaktif.
 - **Unduh Hasil**: Hasil klasifikasi batch dapat diunduh kembali dalam format CSV.
-- **Model Machine Learning**: Menggunakan model *Decision Tree* yang sudah dilatih sebelumnya dengan ekstraksi fitur TF-IDF dan seleksi fitur Chi-Square.
+- **Model Machine Learning**: Menggunakan model _Decision Tree_ yang sudah dilatih sebelumnya dengan ekstraksi fitur TF-IDF dan seleksi fitur Chi-Square.
 
 ## 🛠️ Teknologi yang Digunakan
 
@@ -27,14 +29,17 @@ Aplikasi ini dapat diakses secara langsung melalui: [**klasifikasi-berita-dt.str
 ```text
 📦 Tugas Kelompok-1
  ┣ 📂 modules
+ ┃ ┣ 📜 __init__.py
  ┃ ┣ 📜 model_loader.py    # Logika pemuatan model dan prediksi
  ┃ ┗ 📜 preprocessing.py   # Pipeline pembersihan teks (NLP)
+ ┣ 📂 notebook
+ ┃ ┣ 📜 decision-tree.ipynb # Notebook untuk training dan riset model
+ ┃ ┗ 📜 decision-tree.py    # Versi script dari notebook training
  ┣ 📜 app.py               # File utama aplikasi Streamlit
  ┣ 📜 requirements.txt     # Daftar dependensi library
  ┣ 📜 tfidf_vectorizer.pkl # Model vectorizer yang sudah dilatih
  ┣ 📜 chi2_selector.pkl    # Model selector fitur yang sudah dilatih
  ┣ 📜 decision_tree_model.pkl # Model classifier Decision Tree
- ┣ 📜 news-classification-DT.ipynb # Notebook untuk training dan riset model
  ┗ 📜 README.md            # Dokumentasi proyek
 ```
 
@@ -43,12 +48,14 @@ Aplikasi ini dapat diakses secara langsung melalui: [**klasifikasi-berita-dt.str
 Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di lingkungan lokal Anda:
 
 ### 1. Clone Repositori
+
 ```bash
 git clone https://github.com/oka123/Klasifikasi-Berita---Decision-Tree.git
 cd Klasifikasi-Berita---Decision-Tree
 ```
 
 ### 2. Buat Virtual Environment (Opsional tapi Disarankan)
+
 ```bash
 python -m venv venv
 # Aktifkan venv (Windows)
@@ -58,11 +65,13 @@ source venv/bin/activate
 ```
 
 ### 3. Instal Dependensi
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Jalankan Aplikasi
+
 ```bash
 streamlit run app.py
 ```
@@ -82,4 +91,3 @@ Setelah menjalankan perintah di atas, aplikasi akan terbuka secara otomatis di b
    - Pilih kolom mana yang merupakan judul dan mana yang merupakan deskripsi.
    - Klik **"Proses Klasifikasi Batch"**.
    - Setelah selesai, Anda dapat melihat pratinjau hasil dan mengunduhnya via tombol **"Unduh Hasil sebagai CSV"**.
-

@@ -78,14 +78,14 @@ def main():
                     
                     # Display result creatively
                     st.markdown("### Hasil Prediksi:")
-                    if prediction.lower() == 'politik' or prediction.lower() == 'politics':
-                        st.info(f"🏛️ **{prediction.upper()}**")
-                    elif prediction.lower() == 'olahraga' or prediction.lower() == 'sports':
-                        st.success(f"⚽ **{prediction.upper()}**")
-                    elif prediction.lower() == 'teknologi' or prediction.lower() == 'technology':
-                        st.warning(f"💻 **{prediction.upper()}**")
+                    if str(prediction).lower() == 'politik' or str(prediction).lower() == 'politics':
+                        st.info(f"🏛️ **{str(prediction).upper()}**")
+                    elif str(prediction).lower() == 'olahraga' or str(prediction).lower() == 'sports':
+                        st.success(f"⚽ **{str(prediction).upper()}**")
+                    elif str(prediction).lower() == 'teknologi' or str(prediction).lower() == 'technology':
+                        st.warning(f"💻 **{str(prediction).upper()}**")
                     else:
-                        st.info(f"**{prediction.upper()}**")
+                        st.info(f"**{str(prediction).upper()}**")
                         
     # --- TAB 2: BATCH UPLOAD ---
     with tab2:

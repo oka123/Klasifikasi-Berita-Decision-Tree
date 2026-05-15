@@ -30,4 +30,14 @@ def predict_news(text: str, vectorizer, chi2_selector, dt_model) -> str:
     
     # Predict
     prediction = dt_model.predict(text_final)
-    return prediction[0]
+    result = prediction[0]
+    
+    # Mapping for AG News dataset classes (1: World/Politik, 2: Sports/Olahraga, 4: Sci-Tech/Teknologi)
+    label_map = {
+        1: "Politik",
+        2: "Olahraga",
+        4: "Teknologi"
+    }
+    
+    # Return mapped string or the original result if it's already a string
+    return label_map.get(result, str(result))
