@@ -10,7 +10,7 @@ Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decisio
 ## 🚀 Fitur Utama
 
 - **Input Berita Tunggal**: Masukkan judul dan deskripsi berita secara manual untuk mendapatkan prediksi kategori instan.
-- **Unggah Batch (CSV/Excel)**: Unggah file dataset berita dalam format CSV atau Excel untuk diproses secara massal.
+- **Input Banyak Berita (CSV/Excel)**: Unggah file dataset berita dalam format CSV atau Excel untuk diproses secara massal.
 - **Visualisasi Hasil**: Menampilkan pratinjau data asli dan hasil prediksi dalam tabel yang interaktif.
 - **Unduh Hasil**: Hasil klasifikasi batch dapat diunduh kembali dalam format CSV.
 - **Model Machine Learning**: Menggunakan model _Decision Tree_ yang sudah dilatih sebelumnya dengan ekstraksi fitur TF-IDF dan seleksi fitur Chi-Square.
@@ -38,7 +38,7 @@ Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decisio
  ┣ 📜 app.py               # File utama aplikasi Streamlit
  ┣ 📜 requirements.txt     # Daftar dependensi library
  ┣ 📜 tfidf_vectorizer.pkl # Model vectorizer yang sudah dilatih
- ┣ 📜 chi2_selector.pkl    # Model selector fitur yang sudah dilatih
+ ┣ 📜 ig_selector.pkl # Model selector fitur yang sudah dilatih
  ┣ 📜 decision_tree_model.pkl # Model classifier Decision Tree
  ┗ 📜 README.md            # Dokumentasi proyek
 ```
@@ -85,8 +85,8 @@ Setelah menjalankan perintah di atas, aplikasi akan terbuka secara otomatis di b
    - Ketik atau tempel deskripsi berita.
    - Klik tombol **"Prediksi Kategori"**.
 
-2. **Unggah Batch**:
-   - Pindah ke tab **"Unggah Batch"**.
+2. **Input Banyak Berita**:
+   - Pindah ke tab **"Input Banyak Berita"**.
    - Unggah file CSV atau Excel Anda.
    - Pilih kolom mana yang merupakan judul dan mana yang merupakan deskripsi.
    - Klik **"Proses Klasifikasi Batch"**.

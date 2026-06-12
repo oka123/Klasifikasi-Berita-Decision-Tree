@@ -15,7 +15,7 @@ st.set_page_config(
 # =================================================================
 # RESOURCE INITIALIZATION
 # =================================================================
-vectorizer, chi2_selector, dt_model = load_models()
+vectorizer, ig_selector, dt_model = load_models()
 
 # =================================================================
 # USER INTERFACE
@@ -35,15 +35,13 @@ def main():
             
             **Cara penggunaan:**
             1. Gunakan tab **Input Berita Tunggal** untuk mengklasifikasikan satu artikel pada satu waktu.
-            2. Gunakan tab **Unggah Batch** untuk mengklasifikasikan banyak artikel dari file CSV atau Excel.
+            2. Gunakan tab **Input Banyak Berita** untuk mengklasifikasikan banyak artikel dari file CSV atau Excel.
             """
         )
-        st.divider()
-        st.caption("Ditenagai oleh Streamlit & Scikit-Learn")
 
     # Main Area
     st.title("Klasifikasi Berita Otomatis")
-    st.markdown("Klasifikasikan artikel berita ke dalam kategorinya masing-masing dengan mudah menggunakan Kecerdasan Buatan.")
+    st.markdown("Klasifikasikan artikel berita ke dalam kategorinya masing-masing dengan mudah menggunakan model Decision Tree.")
     st.divider()
     
     # Check if models are loaded before proceeding
@@ -52,7 +50,7 @@ def main():
         return
 
     # Tabs for different inputs
-    tab1, tab2 = st.tabs(["✍️ Input Berita Tunggal", "📁 Unggah Batch (CSV/Excel)"])
+    tab1, tab2 = st.tabs(["✍️ Input Berita Tunggal", "📁 Input Banyak Berita (CSV/Excel)"])
     
     # --- TAB 1: SINGLE NEWS INPUT ---
     with tab1:
@@ -72,7 +70,7 @@ def main():
                     full_text = f"{news_title} {news_desc}"
                     
                     with st.spinner("Menganalisis teks..."):
-                        prediction = predict_news(full_text, vectorizer, chi2_selector, dt_model)
+                        prediction = predict_news(full_text, vectorizer, ig_selector, dt_model)
                     
                     st.success("Klasifikasi Selesai!")
                     
@@ -131,7 +129,7 @@ def main():
                             desc_val = str(row[desc_col]) if str(row[desc_col]) != "nan" else ""
                             
                             full_text = f"{title_val} {desc_val}".strip()
-                            pred = predict_news(full_text, vectorizer, chi2_selector, dt_model)
+                            pred = predict_news(full_text, vectorizer, ig_selector, dt_model)
                             predictions.append(pred)
                             
                         # Add predictions to dataframe
