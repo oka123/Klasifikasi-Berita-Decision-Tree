@@ -1,11 +1,10 @@
 # 📰 AI News Classifier - Pengklasifikasi Berita Otomatis
 
-Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decision Tree**) untuk mengklasifikasikan artikel berita ke dalam kategori tertentu secara otomatis. Proyek ini dikembangkan sebagai bagian dari tugas kelompok untuk mata kuliah Pengantar Pemrosesan Data dan Multimedia.
+Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decision Tree**) untuk mengklasifikasikan artikel berita ke dalam kategori tertentu secara otomatis. Proyek ini dikembangkan sebagai bagian dari tugas kelompok pertama Kelas A Kelompok 4 pada mata kuliah Pengantar Pemrosesan Data dan Multimedia.
 
 ### 🔗 Link Terkait
 
 - **Live Demo**: [klasifikasi-berita-dt.streamlit.app](https://klasifikasi-berita-dt.streamlit.app/)
-- **Kaggle Notebook**: [Notebook](https://www.kaggle.com/code/iputugedeokaadyuta/tugas-ppdm-diy)
 
 ## 🚀 Fitur Utama
 
@@ -27,20 +26,20 @@ Aplikasi web berbasis **Streamlit** yang menggunakan Machine Learning (**Decisio
 ## 📁 Struktur Proyek
 
 ```text
-📦 Tugas Kelompok-1
+ ┣ 📂 Dataset_AG_News
+ ┃ ┣ 📜 test.csv              # Dataset uji
+ ┃ ┗ 📜 train.csv             # Dataset latih
  ┣ 📂 modules
  ┃ ┣ 📜 __init__.py
- ┃ ┣ 📜 model_loader.py    # Logika pemuatan model dan prediksi
- ┃ ┗ 📜 preprocessing.py   # Pipeline pembersihan teks (NLP)
- ┣ 📂 notebook
- ┃ ┣ 📜 decision-tree.ipynb # Notebook untuk training dan riset model
- ┃ ┗ 📜 decision-tree.py    # Versi script dari notebook training
- ┣ 📜 app.py               # File utama aplikasi Streamlit
- ┣ 📜 requirements.txt     # Daftar dependensi library
- ┣ 📜 tfidf_vectorizer.pkl # Model vectorizer yang sudah dilatih
- ┣ 📜 ig_selector.pkl # Model selector fitur yang sudah dilatih
+ ┃ ┣ 📜 model_loader.py       # Logika pemuatan model dan prediksi
+ ┃ ┗ 📜 preprocessing.py      # Pipeline pembersihan teks (NLP)
+ ┣ 📜 Notebook.ipynb          # Jupyter Notebook untuk analisis data & training model
+ ┣ 📜 app.py                  # File utama aplikasi Streamlit
+ ┣ 📜 requirements.txt        # Daftar dependensi library
+ ┣ 📜 tfidf_vectorizer.pkl    # Model vectorizer yang sudah dilatih
+ ┣ 📜 ig_selector.pkl         # Model selector fitur yang sudah dilatih
  ┣ 📜 decision_tree_model.pkl # Model classifier Decision Tree
- ┗ 📜 README.md            # Dokumentasi proyek
+ ┗ 📜 README.md               # Dokumentasi proyek
 ```
 
 ## ⚙️ Instalasi & Cara Menjalankan
@@ -50,27 +49,17 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini di lingkungan lo
 ### 1. Clone Repositori
 
 ```bash
-git clone https://github.com/oka123/Klasifikasi-Berita---Decision-Tree.git
-cd Klasifikasi-Berita---Decision-Tree
+git clone https://github.com/oka123/Klasifikasi-Berita-Decision-Tree.git
+cd Klasifikasi-Berita-Decision-Tree
 ```
 
-### 2. Buat Virtual Environment (Opsional tapi Disarankan)
-
-```bash
-python -m venv venv
-# Aktifkan venv (Windows)
-.\venv\Scripts\activate
-# Aktifkan venv (Linux/Mac)
-source venv/bin/activate
-```
-
-### 3. Instal Dependensi
+### 2. Instal Dependensi
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Jalankan Aplikasi
+### 3. Jalankan Aplikasi
 
 ```bash
 streamlit run app.py
